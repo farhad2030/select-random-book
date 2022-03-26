@@ -1,0 +1,17 @@
+.addToCard {
+  min-width: 250px;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  /* box-shadow: 1px 2px 3px #eee; */
+  border: 1px solid sienna;
+  padding: 5px;
+  border-radius: 5px;
+}
+.addToCard img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
