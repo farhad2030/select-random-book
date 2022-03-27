@@ -15,7 +15,7 @@ const Home = () => {
   const addToCardHandeler = (book) => {
     let tempSelectBooks = [];
     // console.log(book);
-    if (selectedBooks.filter((tempBook) => tempBook.id != book.id).length) {
+    if (selectedBooks.find((tempBook) => tempBook.id == book.id)) {
       return;
     }
 
@@ -36,7 +36,7 @@ const Home = () => {
 
     setSelectONeBook(selectedBooks[index]);
   };
-  console.log(selectOneBook);
+  // console.log(selectOneBook);
   useEffect(() => {
     fetch("./hello.JSON")
       .then((response) => response.json())

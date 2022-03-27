@@ -6,7 +6,7 @@ const AddToCard = (props) => {
   // const { id, name, img } = props.book;]
 
   // let lld = ;
-  console.log(props);
+  // console.log(props);
   return (
     <>
       {props.selectedBooks.map((book) => {
