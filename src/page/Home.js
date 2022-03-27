@@ -16,6 +16,8 @@ const Home = () => {
     let tempSelectBooks = [];
     // console.log(book);
     if (selectedBooks.find((tempBook) => tempBook.id == book.id)) {
+      alert("Can't add same book");
+
       return;
     }
 
