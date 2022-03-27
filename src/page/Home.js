@@ -45,7 +45,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="heading">Select random 4 books</div>
+      <div className="heading">Select Best Book</div>
       <div className="container">
         <div className="cardContainer">
           {books.map((book) => (
