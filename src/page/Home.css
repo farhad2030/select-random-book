@@ -28,3 +28,28 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.oneBook {
+  background-color: aquamarine;
+  padding: 10px;
+  margin: 10px 0px;
+  border: 1px solid royalblue;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn {
+  display: block;
+  margin: 10px 0px;
+  padding: 10px;
+  width: 150px;
+  border: none;
+  background-color: rgb(161, 161, 4);
+  color: aliceblue;
+  border-radius: 5px;
+}
+.questions {
+  padding: 10px;
+
+  margin: 10px;
+  border: 1px solid rgb(161, 161, 4);
+  border-radius: 5px;
+}

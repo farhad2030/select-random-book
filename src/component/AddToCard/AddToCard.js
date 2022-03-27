@@ -11,7 +11,7 @@ const AddToCard = (props) => {
     <>
       {props.selectedBooks.map((book) => {
         return (
-          <div className="addToCard">
+          <div key={book.id} className="addToCard">
             <img src={book.imageLink} alt="book" />
 
             <div>{book.name}</div>
