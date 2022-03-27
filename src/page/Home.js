@@ -9,22 +9,35 @@ import "./Home.css";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
+  const [selectedBooks, setSelectedBooks] = useState([]);
+
+  const addToCardHandeler = (book) => {
+    let tempSelectBooks = [];
+    // console.log(book);
+    tempSelectBooks = [...selectedBooks, book];
+    setSelectedBooks(tempSelectBooks);
+  };
+
   useEffect(() => {
     fetch("./hello.JSON")
       .then((response) => response.json())
       .then((data) => setBooks(data));
   }, []);
+
   return (
     <div>
       <div className="heading">Select random 4 books</div>
       <div className="container">
         <div className="cardContainer">
           {books.map((book) => (
-            <Card key={book.id} book={book} />
+            <Card key={book.id} book={book} func={addToCardHandeler} />
           ))}
         </div>
         <div className="addToCardContainer">
-          <AddToCard />
+          {/* {selectedBooks.map((book) => {
+            <AddToCard key={book.id} selectBook={book} />;
+          })} */}
+          <AddToCard selectedBooks={selectedBooks} />
         </div>
       </div>
     </div>

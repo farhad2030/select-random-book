@@ -2,8 +2,9 @@ import React from "react";
 
 import "./Card.css";
 const Card = (props) => {
-  console.log(props.book);
+  // console.log(props);
   const { name, imageLink, id, price } = props.book;
+
   return (
     <div className="card">
       <img src={imageLink} alt="book image" />
@@ -13,7 +14,7 @@ const Card = (props) => {
         <p>Price : {price}</p>
         {/* <p>{imageLink}</p> */}
       </div>
-      <button>
+      <button onClick={() => props.func(props.book)}>
         <span className="btntext">Add to cart</span>{" "}
       </button>
     </div>
